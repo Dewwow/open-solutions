@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.86.1'
+project:
+    name: dewwow-open-solutions
+    package:
+        name: dewwow-open-solutions
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/dewwow-open-solutions/tests
+            options:
+                outputdir: robot/dewwow-open-solutions/results
+
+    robot_testdoc:
+        options:
+            path: robot/dewwow-open-solutions/tests
+            output: robot/dewwow-open-solutions/doc/dewwow-open-solutions_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
